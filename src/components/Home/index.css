@@ -1,0 +1,170 @@
+.homecontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: auto;
+
+  min-height: 100vh;
+}
+
+.slick-next {
+  position: absolute;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+}
+.slick-prev {
+  position: absolute;
+  left: 10px;
+  z-index: 1;
+}
+.slick-next:before,
+.slick-prev:before {
+  font-size: 24px;
+  line-height: 1;
+  opacity: 0.75;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .homecontainer {
+    width: 100%;
+    max-width: 1110px;
+  }
+}
+.homesub {
+  min-height: 82vh;
+}
+.itemcoursel {
+  width: 100%;
+  height: 120px;
+}
+
+.allrestaurant {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .allrestaurant {
+    width: 91%;
+    margin-right: auto;
+    justify-content: center;
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 616px) {
+  .allrestaurant {
+    width: 91%;
+    display: flex;
+    align-items: center;
+  }
+}
+.paginationcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selectcontainer {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .selectcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+.navbutton {
+  width: 27px;
+  height: 27px;
+  font-size: 20px;
+  padding-left: 1px;
+  margin: 0px 10px;
+  background-color: orange;
+  color: white;
+  font-weight: 700;
+  border: none;
+}
+.restaurantscontainer {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popularname {
+  margin: 0px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.sort {
+  font-size: 13px;
+  margin-right: 8px;
+  font-weight: 600;
+}
+.sorts {
+  margin-right: 5px;
+}
+.sortcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+}
+@media screen and (max-width: 767px) {
+  .sortcontainer {
+    width: 150px;
+  }
+}
+.populartag {
+  margin: 7px 0px;
+  font-weight: 17px;
+  font-weight: 500;
+}
+@media screen and (max-width: 767px) {
+  .popularname {
+    font-size: 19px;
+  }
+  .populartag {
+    font-size: 13px;
+  }
+}
+.popularcontainer {
+  width: 91%;
+  padding: 20px;
+}
+
+.courselcontainer {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+}
+
+.sliderunorder {
+  padding: 0;
+
+  margin: 0;
+}
+
+.restaurantunorder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 0px;
+}
+
+.slick-slide img {
+  display: block;
+  height: 196px;
+}

@@ -1,0 +1,93 @@
+.restlogo {
+  width: 300px;
+  margin-right: 18px;
+  border-radius: 8px;
+}
+.hotelname {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 40px;
+  font-style: normal;
+}
+.allrestauranting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contentbox {
+  color: white;
+}
+@media screen and (max-width: 767px) {
+  .allrestauranting {
+    display: flex;
+    align-items: center;
+  }
+}
+.allrestaurants {
+  background-color: #333333;
+  font-family: 'Roboto';
+  font-style: normal;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #ffffff;
+  padding: 20px;
+}
+.ratingcontainer {
+  display: flex;
+}
+.d1 {
+  margin-right: 10px;
+}
+.d2 {
+  margin-left: 10px;
+}
+
+.line {
+  margin: 5px;
+}
+.p1 {
+  margin: 0px;
+  margin-bottom: 6px;
+}
+.z1 {
+  color: wheat;
+}
+.place {
+  line-height: 20px;
+  font-weight: 400;
+}
+.bottom {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.fooddet {
+  width: 90%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 376px) {
+  .restlogo {
+    max-width: 200px;
+    min-width: 146px;
+    height: 280px;
+    margin-right: 18px;
+    border-radius: 8px;
+  }
+  .hotelname {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 597px) {
+  .restlogo {
+    max-width: 200px;
+    min-width: 156px;
+    height: 220px;
+    margin-right: 18px;
+    border-radius: 8px;
+  }
+  .hotelname {
+    font-size: 25px;
+  }
+}

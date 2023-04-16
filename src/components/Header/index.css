@@ -1,0 +1,146 @@
+.listunordercontainer {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0px;
+  padding-right: 10px;
+  position: relative;
+}
+.listitem {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.logoutpattern1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.s1 {
+  font-size: 18px;
+  color: black;
+}
+.s1:hover {
+  color: #f7931e;
+}
+.l2 {
+  display: flex;
+  align-items: center;
+}
+
+.popupcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  background-color: rgb(182, 223, 240);
+  top: 20px;
+  padding: 8px;
+  right: -50px;
+  width: 350px;
+  border-radius: 7px;
+
+  height: 60px;
+  transition: 1s;
+  animation: animate 1s ease forwards;
+}
+
+@keyframes animate {
+  from {
+    right: -100px;
+  }
+  to {
+    right: -50px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .logoutpattern1 {
+    display: none;
+  }
+  .popupcontainer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logoutpattern {
+    display: none;
+  }
+}
+.lo {
+  font-size: 18px;
+}
+.navcontainer {
+  background-color: #f8fafc;
+  padding: 10px;
+}
+.capimg {
+  width: 36px;
+  height: 36px;
+}
+.home {
+  font-weight: 500;
+}
+.logoutbutton {
+  background-color: #f7931e;
+  color: #f8fafc;
+  border-radius: 5px;
+  border: none;
+  font-size: 10px;
+  padding: 4px 12px;
+}
+.cart {
+  font-weight: 500;
+}
+.popbut {
+  background-color: transparent;
+  border: none;
+}
+.move {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+}
+.move:hover {
+  color: #f7931e;
+}
+.c1 {
+  margin: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.head {
+  text-decoration: none;
+}
+.forward {
+  text-decoration: none;
+  width: 300px;
+}
+.totalcount {
+  background-color: lightskyblue;
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+  width: 19px;
+  height: 19px;
+  border-radius: 100%;
+  margin-left: 5px;
+  padding: 2px 4px 2px 3px;
+  background-color: #f7931e;
+}
+
+@media screen and (max-width: 767px) {
+  .head {
+    font-size: 23px;
+  }
+  .totalcount {
+    background-color: white;
+  }
+  .logoutbutton {
+    width: 90px;
+    height: 30px;
+    font-size: 17px;
+  }
+}

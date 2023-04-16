@@ -1,0 +1,73 @@
+.hotellists {
+  display: flex;
+
+  width: 50%;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+.foodimg {
+  width: 200px;
+  height: 110px;
+  transition: 0.8s;
+}
+.foodimg:hover {
+  transform: scale(1.1);
+}
+.starrating {
+  display: flex;
+  align-items: center;
+}
+.star {
+  color: #ffcc00;
+  font-size: 14px;
+  margin-right: 3px;
+}
+.rupee {
+  font-size: 14px;
+  margin-right: 5px;
+}
+.addbutton {
+  margin: 3px;
+  color: #ffcc00;
+  border: 2px solid #ffcc00;
+  background-color: white;
+  border-radius: 6px;
+}
+.details {
+  margin-left: 7px;
+}
+@media screen and (max-width: 600px) {
+  .hotellists {
+    width: 100%;
+  }
+  .foodimg {
+    width: 50%;
+    height: 145px;
+  }
+}
+
+.view {
+  font-size: 8px;
+  margin-left: 3px;
+  margin-top: 5px;
+}
+.dots {
+  margin: 0;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.k1 {
+}
+@media screen and (min-width: 600px) {
+  .hotellists {
+    width: 50%;
+  }
+  .foodimg {
+    width: 50%;
+    max-width: 40%;
+    min-width: 25%;
+    height: 145px;
+  }
+}
