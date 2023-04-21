@@ -31,7 +31,7 @@ class Home extends Component {
     coursellist: [],
     restaurantslist: [],
     offerstatus: true,
-    option: '',
+    option: 'Lowest',
     activepage: 1,
     liststatus: true,
   }
@@ -64,7 +64,7 @@ class Home extends Component {
   }
 
   getlistloader = () => (
-    <div className="loader">
+    <div testid="restaurants-list-loader" className="loader">
       <Loader
         type="ThreeDots"
         width="40px"
@@ -74,8 +74,8 @@ class Home extends Component {
     </div>
   )
 
-  getloader = () => (
-    <div className="loader">
+  getloaders = () => (
+    <div testid="restaurants-offers-loader" className="loader">
       <Loader
         type="ThreeDots"
         width="40px"
@@ -185,7 +185,7 @@ class Home extends Component {
     return (
       <div>
         <div className="courselcontainer">
-          {offerstatus === true ? this.getloader() : this.slidercall()}
+          {offerstatus === true ? this.getloaders() : this.slidercall()}
         </div>
         {liststatus === true ? (
           this.getlistloader()
@@ -222,6 +222,7 @@ class Home extends Component {
             </div>
             <div className="paginationcontainer">
               <button
+                testid="pagination-left-button"
                 onClick={this.backwardpage}
                 className="navbutton"
                 type="button"
@@ -229,10 +230,11 @@ class Home extends Component {
                 <MdOutlineNavigateBefore />
               </button>
               <p>
-                <span>{activepage}</span>
+                <span testid="active-page-number">{activepage}</span>
                 of 4
               </p>
               <button
+                testid="pagination-right-button"
                 onClick={this.forwardpage}
                 className="navbutton"
                 type="button"

@@ -1,8 +1,17 @@
 import CardContext from '../../Context/Contextdata'
 
 const Cartlist = props => {
-  const {items} = props
-  const {imageUrl, id, name, cost, count} = items
+  const {items, removeitem, increasecountdata, decreasecountdata} = props
+  console.log(items)
+  console.log('items')
+  console.log(items)
+  const {imageUrl, id, name, cost, quantity} = items
+  console.log(items.quantity)
+  const getdata = JSON.parse(localStorage.getItem('cartData'))
+  const particulardata = getdata.filter(object => id === object.id)
+  console.log('datas')
+  console.log(particulardata[0])
+  console.log('datas')
   return (
     <CardContext.Consumer>
       {value => {
@@ -15,34 +24,40 @@ const Cartlist = props => {
         } = value
 
         const removeelementcart = () => {
-          removeelementfromcart(id)
+          removeitem(id)
         }
 
         const onDecrement = () => {
-          decreasecount(id)
+          decreasecountdata(id)
         }
         const onIncrement = () => {
-          increasecount(id)
+          increasecountdata(id)
         }
         const totalprice = () => {}
 
         return (
           <li id={id} key={id} className="cartlist">
-            <div className="dish">
+            <div testid="cartItem" className="dish">
               <img className="cartimg" src={imageUrl} alt="img" />
               <h1 className="ordertotal">{name}</h1>
               <div className="cartflow">
                 <h1 className="ordertotal nametotal">{name}</h1>
                 <div className="counter">
                   <button
+                    testid="decrement-quantity"
                     className="measure"
                     type="button"
                     onClick={onDecrement}
                   >
                     -
                   </button>
-                  <p className="count">{count}</p>
+
+                  <p testid="item-quantity" className="count">
+                    {particulardata[0].quantity}
+                  </p>
+
                   <button
+                    testid="increment-quantity"
                     className="measure"
                     type="button"
                     onClick={onIncrement}
@@ -51,7 +66,9 @@ const Cartlist = props => {
                   </button>
                 </div>
 
-                <p className="price">Rs.{cost * count}</p>
+                <p testid="total-price" className="price">
+                  Rs.{cost * quantity}
+                </p>
                 <button
                   className="remove"
                   onClick={removeelementcart}

@@ -77,7 +77,7 @@ class ParticularRestaurant extends Component {
   }
 
   getloader = () => (
-    <div className="loader">
+    <div testid="restaurant-details-loader" className="loader">
       <Loader
         type="TailSpin"
         width="40px"
@@ -142,7 +142,7 @@ class ParticularRestaurant extends Component {
 
     return (
       <div className="allrestaurants">
-        <img src={imageUrl} alt="restaurant" className="restlogo" />
+        <img src={imageUrl} alt="offer" className="restlogo" />
         <div className="contentbox">
           <h1 className="p1 z1 hotelname">{name}</h1>
           <p className="p1 z1 place">{cuisine}</p>
@@ -175,6 +175,7 @@ class ParticularRestaurant extends Component {
               onmakeadd={this.onmakeadd}
               ids={ids}
               item={object}
+              getmoredetails={this.getmoredetails}
             />
           ))}
         </ul>

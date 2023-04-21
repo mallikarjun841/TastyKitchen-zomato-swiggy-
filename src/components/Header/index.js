@@ -1,6 +1,6 @@
 import './index.css'
 import Popup from 'reactjs-popup'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import {Link, withRouter} from 'react-router-dom'
 import Cookies from 'js-cookie'
 
@@ -14,16 +14,19 @@ const Header = props => {
     history.replace('/login')
   }
 
+  const cartdata = JSON.parse(localStorage.getItem('cartData'))
+  const totalcount = cartdata.length
+
   const homeclick = () => {}
 
   return (
     <CardContext.Consumer>
       {value => {
         const {CartItem} = value
-        const totalcount = CartItem.length
+
         return (
           <nav className="navcontainer">
-            <div className="listunordercontainer">
+            <ul className="listunordercontainer">
               <li key="logo" className="listitem">
                 <Link to="/">
                   <img
@@ -41,10 +44,10 @@ const Header = props => {
                 className="listitem logoutpattern"
               >
                 <Link className="move" to="/">
-                  <h1 className="c1 head home">Home</h1>
+                  <li className="c1 head home">Home</li>
                 </Link>
                 <Link className="move" to="/cart">
-                  <h1 className="c1 head cart">Cart</h1>
+                  <li className="c1 head cart">Cart</li>
                 </Link>
                 <span className="totalcount">{totalcount}</span>
 
@@ -58,13 +61,13 @@ const Header = props => {
               </li>
 
               <li
-                key="logout"
+                key="logouts"
                 onClick={homeclick}
                 className="listitem logoutpattern1"
               >
                 <Popup
                   trigger={
-                    <button className="popbut">
+                    <button type="button" className="popbut">
                       <img
                         src="https://res.cloudinary.com/dzligmi9w/image/upload/v1670573931/Iconthree_oqndvv.png"
                         alt="img"
@@ -74,12 +77,12 @@ const Header = props => {
                 >
                   <div className="popupcontainer">
                     <Link className="forward" to="/">
-                      <h1 className="s1">Home</h1>
+                      <li className="s1">Home</li>
                     </Link>
                     <Link className="forward" to="/cart">
-                      <h1 className="s1 l2">
+                      <li className="s1 l2">
                         Cart <span className="totalcount">{totalcount}</span>
-                      </h1>
+                      </li>
                     </Link>
                     <button
                       onClick={logout}
@@ -91,7 +94,7 @@ const Header = props => {
                   </div>
                 </Popup>
               </li>
-            </div>
+            </ul>
           </nav>
         )
       }}
