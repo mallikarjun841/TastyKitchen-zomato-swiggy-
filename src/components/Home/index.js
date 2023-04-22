@@ -64,7 +64,8 @@ class Home extends Component {
   }
 
   getlistloader = () => (
-    <div testid="restaurants-list-loader" className="loader">
+    <div className="loader">
+      {/* testid="restaurants-list-loader"  */}
       <Loader
         type="ThreeDots"
         width="40px"
@@ -75,7 +76,8 @@ class Home extends Component {
   )
 
   getloaders = () => (
-    <div testid="restaurants-offers-loader" className="loader">
+    <div className="loader">
+      {/* testid="restaurants-offers-loader"  */}
       <Loader
         type="ThreeDots"
         width="40px"
@@ -222,7 +224,7 @@ class Home extends Component {
             </div>
             <div className="paginationcontainer">
               <button
-                testid="pagination-left-button"
+                // testid="pagination-left-button"
                 onClick={this.backwardpage}
                 className="navbutton"
                 type="button"
@@ -230,11 +232,12 @@ class Home extends Component {
                 <MdOutlineNavigateBefore />
               </button>
               <p>
-                <span testid="active-page-number">{activepage}</span>
+                {/* testid="active-page-number" */}
+                <span>{activepage}</span>
                 of 4
               </p>
               <button
-                testid="pagination-right-button"
+                // testid="pagination-right-button"
                 onClick={this.forwardpage}
                 className="navbutton"
                 type="button"

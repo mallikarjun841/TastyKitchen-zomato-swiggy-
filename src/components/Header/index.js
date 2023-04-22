@@ -80,9 +80,7 @@ const Header = props => {
                       <li className="s1">Home</li>
                     </Link>
                     <Link className="forward" to="/cart">
-                      <li className="s1 l2">
-                        Cart <span className="totalcount">{totalcount}</span>
-                      </li>
+                      <li className="s1 l2">Cart</li>
                     </Link>
                     <button
                       onClick={logout}

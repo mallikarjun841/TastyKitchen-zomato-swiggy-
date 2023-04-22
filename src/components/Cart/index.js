@@ -103,9 +103,8 @@ class Cart extends Component {
                   <div className="billcontainer">
                     <h1 className="ordertotal">Order Total:</h1>
                     <div>
-                      <p testid="total-price" className="bill">
-                        Rs.{totalbill}/-
-                      </p>
+                      {/*  testid="total-price" */}
+                      <p className="bill">Rs.{totalbill}/-</p>
                       <Link to="/payment">
                         <button className="order" type="button">
                           Place Order

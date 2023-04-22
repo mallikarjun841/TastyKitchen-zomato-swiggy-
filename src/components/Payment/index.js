@@ -10,7 +10,7 @@ const Payment = () => (
         src="https://res.cloudinary.com/dzligmi9w/image/upload/v1669858931/Vector_tllcnd.png"
         alt="img"
       />
-      <h1>Payment Successful</h1>
+      <h1 className="pay">Payment Successful</h1>
       <p className="tagpara">
         Thank you for ordering Your payment is successfully completed.
       </p>

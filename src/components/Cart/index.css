@@ -90,7 +90,7 @@
   padding-left: 80px;
   background-color: rgba(192, 192, 192, 0.238);
   border-radius: 7px;
-  padding: 30px;
+  padding: 20px;
 }
 
 .counter {
@@ -173,8 +173,9 @@
   }
   .measure {
     text-align: center;
-    width: 20px;
-    height: 18px;
+    width: 15px;
+    height: 10px;
+    padding-bottom: 15px;
   }
   .cartflow {
     width: 150px;

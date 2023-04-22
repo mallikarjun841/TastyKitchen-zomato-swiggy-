@@ -77,7 +77,8 @@ class ParticularRestaurant extends Component {
   }
 
   getloader = () => (
-    <div testid="restaurant-details-loader" className="loader">
+    <div className="loader">
+      {/* testid="restaurant-details-loader" */}
       <Loader
         type="TailSpin"
         width="40px"

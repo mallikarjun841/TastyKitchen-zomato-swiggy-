@@ -37,27 +37,26 @@ const Cartlist = props => {
 
         return (
           <li id={id} key={id} className="cartlist">
-            <div testid="cartItem" className="dish">
+            {/* testid="cartItem" */}
+            <div className="dish">
               <img className="cartimg" src={imageUrl} alt="img" />
               <h1 className="ordertotal">{name}</h1>
               <div className="cartflow">
                 <h1 className="ordertotal nametotal">{name}</h1>
                 <div className="counter">
                   <button
-                    testid="decrement-quantity"
+                    // testid="decrement-quantity"
                     className="measure"
                     type="button"
                     onClick={onDecrement}
                   >
                     -
                   </button>
-
-                  <p testid="item-quantity" className="count">
-                    {particulardata[0].quantity}
-                  </p>
+                  {/*  testid="item-quantity" */}
+                  <p className="count">{particulardata[0].quantity}</p>
 
                   <button
-                    testid="increment-quantity"
+                    // testid="increment-quantity"
                     className="measure"
                     type="button"
                     onClick={onIncrement}
@@ -65,10 +64,8 @@ const Cartlist = props => {
                     +
                   </button>
                 </div>
-
-                <p testid="total-price" className="price">
-                  Rs.{cost * quantity}
-                </p>
+                {/* testid="total-price" */}
+                <p className="price">Rs.{cost * quantity}</p>
                 <button
                   className="remove"
                   onClick={removeelementcart}

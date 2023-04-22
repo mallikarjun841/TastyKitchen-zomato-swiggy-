@@ -19,6 +19,7 @@
 .s1 {
   font-size: 18px;
   color: black;
+  list-style-type: none;
 }
 .s1:hover {
   color: #f7931e;
@@ -37,7 +38,7 @@
   top: 20px;
   padding: 8px;
   right: -50px;
-  width: 350px;
+  width: 250px;
   border-radius: 7px;
 
   height: 60px;

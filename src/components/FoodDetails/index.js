@@ -104,7 +104,8 @@ class FoodDetails extends Component {
           // console.log(visibleitem)
 
           return (
-            <li testid="foodItem" className="hotellists">
+            <li className="hotellists">
+              {/* testid="foodItem" */}
               <img
                 src={imageUrl}
                 alt="restaurant"
@@ -131,20 +132,18 @@ class FoodDetails extends Component {
                 ) : (
                   <div className="counter k1">
                     <button
-                      testid="decrement-count"
+                      //   testid="decrement-count"
                       className="measure"
                       type="button"
                       onClick={this.onDecrement}
                     >
                       -
                     </button>
-
-                    <p testid="active-count" className="dots">
-                      {count}
-                    </p>
+                    {/* testid="active-count"  */}
+                    <p className="dots">{count}</p>
 
                     <button
-                      testid="increment-count"
+                      //   testid="increment-count"
                       className="measure"
                       type="button"
                       onClick={this.onIncrement}
